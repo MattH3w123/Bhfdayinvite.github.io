@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--backg-color);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+[data-mode='gentel'] {
+    --backg-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(22, 21, 21, 0.78)), url(../img/maybe3.jpg);
+    --btn-color: url(../img/132.png);
+}
+  
+[data-mode='hot'] {
+    --backg-color: linear-gradient(rgba(29, 29, 29, 0.45), rgba(24, 23, 23, 0.70)),url(../img/11.jpg);
+    --btn-color: url(../img/male3.png);
+}
+
+
+button {
+	position: absolute;
+	top: 70px;
+	right: 70px;
+	width: 70px;
+	height: 60px;
+	border-radius: 10px;
+	cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  background: var(--btn-color);
+}
+
+.card {
+    width: 830px;
+    height: 600px;
+    position: absolute;
+    margin: 0 auto;
+    margin-right: 400px;
+    -webkit-perspective: 1660px;
+    perspective: 1600px;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .zew {
+    transform: rotateY(-140deg);
+}
+
+.zew,
+.wew {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+}
+
+.wew {
+    background: url(../img/tolo.jpg);
+    background-position: center;
+    background-size: contain;
+    line-height: 3;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+}
+
+.pole {
+    width: 95%;
+    height: 76%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 20px 10px;
+    font-size: 16pt;
+    text-transform: none;
+    text-align: center;
+    color: #ffffff;
+    line-height: normal;
+}
+
+.pole .b2 {
+    font-size: 19pt;
+}
+
+.pole .b1 {
+    font-size: 18pt;
+}
+
+.pole .b3 {
+    font-size: 17pt;
+}
+
+.zew {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+}
+
+.przod,
+.tyl {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+
+.tyl {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tyl img {
+    height: 400px;
+    width: 250px;
+    transform: rotate(-20deg);
+}
+
+.przod {
+    background: url(../img/nice.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.tyl {
+    transform: rotateY(180deg);
+    background: url(../img/tolo.jpg);
+    background-position: center;
+    background-size: contain;
+}

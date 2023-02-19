@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body data-mode="gentel">
+    <button></button>
+    <div class="card">
+        <div class="zew">
+            <div class="przod">
+            </div>
+            <div class="tyl">
+                <img src="./img/alkochol.png" alt="alko">
+            </div>
+        </div>
+        <div class="wew">
+            <div class="pole">
+                <p>
+                    <b class="b1">Serdecznie zapraszam was</b><br>
+                    <br>
+                    <b class="b2"><center>Na moją osiemnastkę</center></b><br>
+                    Która odbędzie się w sobotę 26-tego lutego 2023, 
+                    o godzinie 15.00 u nas w mieszkaniu.<br>
+                    <br>
+                    Będzie to okazja do świętowania mojej pełnoletniości 
+                    oraz spędzenia czasu wraz z rodziną, przy drinku (%% lub bez%%).<br>
+                    <br>
+                    <br> 
+                    <b class="b3">Do zobaczenia na imprezie!</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const body = document.querySelector('body');
+        const btn = document.querySelector('button');
+
+        const colorchanger = () => {
+            if(body.getAttribute('data-mode') === 'gentel') {
+                body.setAttribute('data-mode', 'hot')
+            } else {
+                body.setAttribute('data-mode', 'gentel')
+            }
+        }
+
+        btn.addEventListener('click', colorchanger)
+    </script>
+</body>
+</html>
